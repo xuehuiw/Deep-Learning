@@ -1,4 +1,4 @@
-# 01Linear Model
+# 01 Linear Model
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -18,7 +18,7 @@ mse_list = []
 for w in np.arange(0.0, 4.1, 0.1):
     print("w=", w)
     l_sum = 0
-    for x_val, y_val in zip(x_data, y_data):
+    for x_val, y_val in zip(x_data, y_data):#zip()函数将x_data和y_data中的元素一一对应起来，返回一个可迭代的对象，每次迭代返回一个元组，包含对应位置的元素。
         y_pred_val = forward(x_val)
         loss_val = loss(x_val, y_val)
         l_sum += loss_val
